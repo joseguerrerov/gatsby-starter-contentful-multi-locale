@@ -20,7 +20,8 @@
     "type-checking": "tsc --noEmit",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "postinstall": "node ./bin/hello.js",
-    "setup": "node ./bin/setup.js"
+    "setup": "node ./bin/setup.js",
+    "cleanup-contentful-setup": "node ./bin/cleanup.js"
   },
   "repository": {
     "type": "git",
