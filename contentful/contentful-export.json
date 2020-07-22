@@ -1,0 +1,3984 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "eikr6kdwhrzz"
+          }
+        },
+        "id": "seo",
+        "type": "ContentType",
+        "createdAt": "2020-07-03T01:58:10.067Z",
+        "updatedAt": "2020-07-03T01:58:10.488Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2020-07-03T01:58:10.488Z",
+        "firstPublishedAt": "2020-07-03T01:58:10.488Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "SEO",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "image",
+          "name": "Image",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "image"
+              ],
+              "message": "Please use an Image"
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "eikr6kdwhrzz"
+          }
+        },
+        "id": "page",
+        "type": "ContentType",
+        "createdAt": "2020-07-03T02:00:47.375Z",
+        "updatedAt": "2020-07-22T02:46:30.840Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 21,
+        "publishedAt": "2020-07-22T02:46:30.840Z",
+        "firstPublishedAt": "2020-07-03T02:00:47.845Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "publishedCounter": 11,
+        "version": 22,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "Page",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "slug",
+          "name": "Slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "genericPage",
+          "name": "Generic Page",
+          "type": "Boolean",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "path",
+          "name": "Path",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "blocks",
+          "name": "Blocks",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "embeddedRif",
+                  "hero"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "pageSeo",
+          "name": "Page SEO",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "linkContentType": [
+                "seo"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "eikr6kdwhrzz"
+          }
+        },
+        "id": "navigation",
+        "type": "ContentType",
+        "createdAt": "2020-07-03T03:35:55.302Z",
+        "updatedAt": "2020-07-03T04:05:26.769Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2020-07-03T04:05:26.769Z",
+        "firstPublishedAt": "2020-07-03T03:35:55.969Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "Navigation",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "slug",
+          "name": "slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "logo",
+          "name": "Logo",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "image"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "homePage",
+          "name": "Home Page",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "linkContentType": [
+                "page"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "sideNavigation",
+          "name": "Side Navigation",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "size": {
+                "min": 1,
+                "max": 4
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "page"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "eikr6kdwhrzz"
+          }
+        },
+        "id": "hero",
+        "type": "ContentType",
+        "createdAt": "2020-07-04T20:16:23.817Z",
+        "updatedAt": "2020-07-04T20:16:24.506Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2020-07-04T20:16:24.506Z",
+        "firstPublishedAt": "2020-07-04T20:16:24.506Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "Hero",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "background",
+          "name": "Background",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "image"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "body",
+          "name": "Body",
+          "type": "RichText",
+          "localized": true,
+          "required": true,
+          "validations": [
+            {
+              "nodes": {
+              }
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, link to Url, link to entry, and link to asset nodes are allowed"
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "eikr6kdwhrzz"
+          }
+        },
+        "id": "embeddedRif",
+        "type": "ContentType",
+        "createdAt": "2020-07-05T00:36:53.945Z",
+        "updatedAt": "2020-07-05T00:36:54.422Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2020-07-05T00:36:54.422Z",
+        "firstPublishedAt": "2020-07-05T00:36:54.422Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "Embedded Rif",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "body",
+          "name": "Body",
+          "type": "RichText",
+          "localized": true,
+          "required": false,
+          "validations": [
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "eikr6kdwhrzz"
+          }
+        },
+        "id": "blogPost",
+        "type": "ContentType",
+        "createdAt": "2020-07-05T03:00:51.866Z",
+        "updatedAt": "2020-07-22T00:26:47.300Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2020-07-22T00:26:47.300Z",
+        "firstPublishedAt": "2020-07-05T03:00:52.720Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Blog Post",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "slug",
+          "name": "Slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "image",
+          "name": "Image",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "image"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "seo",
+          "name": "Seo",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "linkContentType": [
+                "seo"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "body",
+          "name": "Body",
+          "type": "RichText",
+          "localized": true,
+          "required": false,
+          "validations": [
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    }
+  ],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "eikr6kdwhrzz",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2020-07-03T01:58:10.637Z",
+        "createdBy": {
+          "sys": {
+            "id": "3zwp1DCzGbvJjunZqNodNG",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-07-03T01:58:11.198Z",
+        "updatedBy": {
+          "sys": {
+            "id": "3zwp1DCzGbvJjunZqNodNG",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "seo",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "image",
+          "settings": {
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "eikr6kdwhrzz",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 22,
+        "createdAt": "2020-07-03T02:00:48.016Z",
+        "createdBy": {
+          "sys": {
+            "id": "3zwp1DCzGbvJjunZqNodNG",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-07-22T02:46:31.461Z",
+        "updatedBy": {
+          "sys": {
+            "id": "3zwp1DCzGbvJjunZqNodNG",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "page",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "slug",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "genericPage",
+          "settings": {
+            "trueLabel": "True",
+            "falseLabel": "False"
+          },
+          "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "path",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "blocks",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "pageSeo",
+          "settings": {
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "eikr6kdwhrzz",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2020-07-03T03:35:56.150Z",
+        "createdBy": {
+          "sys": {
+            "id": "3zwp1DCzGbvJjunZqNodNG",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-07-03T04:05:27.213Z",
+        "updatedBy": {
+          "sys": {
+            "id": "3zwp1DCzGbvJjunZqNodNG",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "navigation",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "slug",
+          "widgetId": "slugEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "logo",
+          "settings": {
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "homePage",
+          "settings": {
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "sideNavigation",
+          "settings": {
+            "bulkEditing": false,
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "eikr6kdwhrzz",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2020-07-04T20:16:24.677Z",
+        "createdBy": {
+          "sys": {
+            "id": "3zwp1DCzGbvJjunZqNodNG",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-07-04T20:16:25.144Z",
+        "updatedBy": {
+          "sys": {
+            "id": "3zwp1DCzGbvJjunZqNodNG",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "hero",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "background",
+          "settings": {
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "body",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "eikr6kdwhrzz",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2020-07-05T00:36:54.513Z",
+        "createdBy": {
+          "sys": {
+            "id": "3zwp1DCzGbvJjunZqNodNG",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-07-05T00:36:54.953Z",
+        "updatedBy": {
+          "sys": {
+            "id": "3zwp1DCzGbvJjunZqNodNG",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "embeddedRif",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "body",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "eikr6kdwhrzz",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 8,
+        "createdAt": "2020-07-05T03:00:52.851Z",
+        "createdBy": {
+          "sys": {
+            "id": "3zwp1DCzGbvJjunZqNodNG",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-07-22T00:26:47.835Z",
+        "updatedBy": {
+          "sys": {
+            "id": "3zwp1DCzGbvJjunZqNodNG",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "blogPost",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "slug",
+          "widgetId": "slugEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "image",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "seo",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "body",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "eikr6kdwhrzz"
+          }
+        },
+        "id": "4VWd5f2fmFt9smwRVo1wxi",
+        "type": "Entry",
+        "createdAt": "2020-07-03T02:01:30.209Z",
+        "updatedAt": "2020-07-22T03:35:37.769Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 28,
+        "publishedAt": "2020-07-22T03:35:37.769Z",
+        "firstPublishedAt": "2020-07-03T02:03:13.120Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "publishedCounter": 12,
+        "version": 29,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "page"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Gatsby-Starter-Contentful-Multi-Locale",
+          "es": "Gatsby-Starter-Contentful-Multi-Locale"
+        },
+        "slug": {
+          "en-US": "home-page"
+        },
+        "genericPage": {
+          "en-US": true
+        },
+        "path": {
+          "en-US": "/"
+        },
+        "blocks": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3q3xq3HM4AqhjB3Tyn2cLP"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1HF45Va743uBFdCnvWVluc"
+              }
+            }
+          ]
+        },
+        "pageSeo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "Wm7Koczhba4M1Yh9b4Bm5"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "eikr6kdwhrzz"
+          }
+        },
+        "id": "Wm7Koczhba4M1Yh9b4Bm5",
+        "type": "Entry",
+        "createdAt": "2020-07-03T02:01:35.743Z",
+        "updatedAt": "2020-07-03T02:03:03.380Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2020-07-03T02:03:03.380Z",
+        "firstPublishedAt": "2020-07-03T02:03:03.380Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "seo"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Home Page SEO"
+        },
+        "title": {
+          "en-US": "Home",
+          "es": "Home"
+        },
+        "description": {
+          "en-US": "This is the Home Page SEO Description",
+          "es": "Este"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "7ihwKIXZWR4vezsjWVB4tG"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "eikr6kdwhrzz"
+          }
+        },
+        "id": "1UTS1Ng8ZcntSFcfTA5Q6K",
+        "type": "Entry",
+        "createdAt": "2020-07-03T03:37:38.256Z",
+        "updatedAt": "2020-07-22T02:41:23.753Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 16,
+        "publishedAt": "2020-07-22T02:41:23.753Z",
+        "firstPublishedAt": "2020-07-03T03:44:04.715Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "publishedCounter": 6,
+        "version": 17,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "navigation"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Web Page Navigation"
+        },
+        "slug": {
+          "en-US": "web-page-navigation"
+        },
+        "logo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "3NxAGWgJcniTu1sHMwZg4Z"
+            }
+          }
+        },
+        "homePage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "4VWd5f2fmFt9smwRVo1wxi"
+            }
+          }
+        },
+        "sideNavigation": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2vbQb8Ei9eE29XBRb2BELz"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1poLf28qogjbgxv7kJdUNq"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "eikr6kdwhrzz"
+          }
+        },
+        "id": "2vbQb8Ei9eE29XBRb2BELz",
+        "type": "Entry",
+        "createdAt": "2020-07-04T20:08:49.671Z",
+        "updatedAt": "2020-07-22T02:43:12.468Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 12,
+        "publishedAt": "2020-07-22T02:43:12.468Z",
+        "firstPublishedAt": "2020-07-04T20:11:17.053Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 13,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "page"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Generic Page",
+          "es": "Página Genérica"
+        },
+        "slug": {
+          "en-US": "generic-page"
+        },
+        "genericPage": {
+          "en-US": true
+        },
+        "path": {
+          "en-US": "/generic-content-model-page"
+        },
+        "blocks": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "16cuhiJdQcar2ebyKDfUKj"
+              }
+            }
+          ]
+        },
+        "pageSeo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "3Atc5lEqKM2ds920Rk7boC"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "eikr6kdwhrzz"
+          }
+        },
+        "id": "3Atc5lEqKM2ds920Rk7boC",
+        "type": "Entry",
+        "createdAt": "2020-07-04T20:09:25.206Z",
+        "updatedAt": "2020-07-04T20:11:12.171Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2020-07-04T20:11:12.171Z",
+        "firstPublishedAt": "2020-07-04T20:11:12.171Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "seo"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Generic Page Seo"
+        },
+        "title": {
+          "en-US": "Generic Page",
+          "es": "Página Genérica"
+        },
+        "description": {
+          "en-US": "Generic Page Description",
+          "es": "Descripción Página Genérica"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4k6rKk9eg818HLLQ69Y7bP"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "eikr6kdwhrzz"
+          }
+        },
+        "id": "3q3xq3HM4AqhjB3Tyn2cLP",
+        "type": "Entry",
+        "createdAt": "2020-07-04T20:17:28.544Z",
+        "updatedAt": "2020-07-22T03:09:15.045Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 49,
+        "publishedAt": "2020-07-22T03:09:15.045Z",
+        "firstPublishedAt": "2020-07-04T20:19:23.079Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "publishedCounter": 6,
+        "version": 50,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "hero"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Home Hero"
+        },
+        "background": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "5UVBI9WkM7gEZPEp9KyUPy"
+            }
+          }
+        },
+        "body": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Gatsby-Starter-Contentful-Multi-Locale",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-1"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "This Starter uses TypeScript, GraphQL code generator, and Styled Components and other technologies to create a fast and easy multi-locale start point with Gatsby.js and Contentful.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          },
+          "es": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "heading-1",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Gatsby-Starter-Contentful-Multi-Locale",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ],
+                "data": {
+                }
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Este starter usa TypeSript, GraphQL code-gen, Styled Components y otros tecnologias para crear un punto de partida rapido y sencillo para construir sitios multi-locale con Gatsby.js y Contentful.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ],
+                "data": {
+                }
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ],
+                "data": {
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "eikr6kdwhrzz"
+          }
+        },
+        "id": "16cuhiJdQcar2ebyKDfUKj",
+        "type": "Entry",
+        "createdAt": "2020-07-04T21:40:31.004Z",
+        "updatedAt": "2020-07-04T21:41:35.912Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 10,
+        "publishedAt": "2020-07-04T21:41:35.912Z",
+        "firstPublishedAt": "2020-07-04T21:41:35.912Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 11,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "hero"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Generic Hero"
+        },
+        "background": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4k6rKk9eg818HLLQ69Y7bP"
+            }
+          }
+        },
+        "body": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "This is a generic page",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-1"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "You can do anything you want here!",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          },
+          "es": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "heading-1",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Esta es una pagina genérica",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ],
+                "data": {
+                }
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Puedes hacer lo que quieras con ella",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ],
+                "data": {
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "eikr6kdwhrzz"
+          }
+        },
+        "id": "1poLf28qogjbgxv7kJdUNq",
+        "type": "Entry",
+        "createdAt": "2020-07-05T00:37:52.479Z",
+        "updatedAt": "2020-07-05T00:40:48.707Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2020-07-05T00:40:48.707Z",
+        "firstPublishedAt": "2020-07-05T00:40:48.706Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "page"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Blog",
+          "es": "Blog"
+        },
+        "slug": {
+          "en-US": "blog"
+        },
+        "genericPage": {
+          "en-US": false
+        },
+        "path": {
+          "en-US": "/blog"
+        },
+        "pageSeo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "2NmYg9r5VC3Q7WZMtbd5hf"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "eikr6kdwhrzz"
+          }
+        },
+        "id": "2NmYg9r5VC3Q7WZMtbd5hf",
+        "type": "Entry",
+        "createdAt": "2020-07-05T00:38:52.315Z",
+        "updatedAt": "2020-07-05T00:39:52.647Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2020-07-05T00:39:52.647Z",
+        "firstPublishedAt": "2020-07-05T00:39:52.647Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "seo"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Blog Seo"
+        },
+        "title": {
+          "en-US": "Blog",
+          "es": "Blog"
+        },
+        "description": {
+          "en-US": "Blog Description",
+          "es": "Descripción Blog"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2Y0vWqDZfQm4oHBLlzbgmo"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "eikr6kdwhrzz"
+          }
+        },
+        "id": "4Q1aXgm2dv7QbiUVGUZuZ",
+        "type": "Entry",
+        "createdAt": "2020-07-05T03:01:28.340Z",
+        "updatedAt": "2020-07-22T02:26:17.388Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 21,
+        "publishedAt": "2020-07-22T02:26:17.388Z",
+        "firstPublishedAt": "2020-07-05T03:03:53.902Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 22,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "blogPost"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Blog Post",
+          "es": "Blog Post (spanish)"
+        },
+        "slug": {
+          "en-US": "blog-post"
+        },
+        "description": {
+          "en-US": "I'm baby activated charcoal la croix hashtag tumeric, blue bottle scenester banh mi normcore direct trade snackwave put a bird on it. Cliche brooklyn health goth cred kombucha stumptown. Photo booth fam everyday carry iceland authentic.",
+          "es": "I'm baby activated charcoal la croix hashtag tumeric, blue bottle scenester banh mi normcore direct trade snackwave put a bird on it. Cliche brooklyn health goth cred kombucha stumptown. Photo booth fam everyday carry iceland authentic."
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "7dLIV32q1dy3X4IPIVyUIt"
+            }
+          }
+        },
+        "seo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "79WJzxgLJcGefCbhdWsMit"
+            }
+          }
+        },
+        "body": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "I'm baby activated charcoal la croix hashtag tumeric, blue bottle scenester banh mi normcore direct trade snackwave put a bird on it. Cliche brooklyn health goth cred kombucha stumptown. Photo booth fam everyday carry iceland authentic. Twee la croix next level quinoa. Echo park hashtag heirloom yuccie chillwave normcore.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Pok pok venmo polaroid messenger bag pop-up +1. Bicycle rights vexillologist franzen, four dollar toast ramps neutra aesthetic flexitarian biodiesel fanny pack vape letterpress normcore selfies yuccie. Flexitarian semiotics waistcoat, art party franzen twee microdosing 3 wolf moon readymade echo park activated charcoal la croix locavore shaman. Raclette pok pok dreamcatcher retro kale chips. Humblebrag williamsburg tilde chia. Meggings pabst microdosing occupy glossier flexitarian vegan.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Hexagon sriracha cliche art party synth kickstarter la croix pour-over. Tbh fam bicycle rights pug direct trade hot chicken. Cornhole street art williamsburg retro ethical. Cronut vape distillery freegan intelligentsia. Asymmetrical cornhole crucifix lyft.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Leggings hoodie street art activated charcoal poke trust fund pour-over subway tile. Kitsch vexillologist listicle chicharrones cloud bread keytar, tote bag palo santo offal poutine. Portland flexitarian beard asymmetrical, church-key bicycle rights woke normcore locavore. Beard selfies live-edge seitan roof party man braid affogato. Next level man braid before they sold out, sustainable hashtag deep v kombucha kale chips meh kinfolk put a bird on it. Bushwick 3 wolf moon 90's, pok pok enamel pin four dollar toast shoreditch man braid. Selfies raw denim bicycle rights jean shorts mumblecore thundercats succulents taiyaki synth neutra paleo narwhal.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Af raw denim wolf jean shorts blog hammock coloring book hoodie. Crucifix stumptown tofu, pitchfork hashtag chartreuse truffaut. Thundercats hella 90's, bushwick shabby chic hell of snackwave helvetica af wayfarers tacos edison bulb semiotics bicycle rights keytar. Marfa hell of godard cornhole echo park paleo, fanny pack man bun art party mlkshk. Schlitz tote bag kogi venmo blue bottle readymade normcore shabby chic master cleanse occupy.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Dummy text? More like dummy thicc text, amirite",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          },
+          "es": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "I'm baby activated charcoal la croix hashtag tumeric, blue bottle scenester banh mi normcore direct trade snackwave put a bird on it. Cliche brooklyn health goth cred kombucha stumptown. Photo booth fam everyday carry iceland authentic. Twee la croix next level quinoa. Echo park hashtag heirloom yuccie chillwave normcore.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Pok pok venmo polaroid messenger bag pop-up +1. Bicycle rights vexillologist franzen, four dollar toast ramps neutra aesthetic flexitarian biodiesel fanny pack vape letterpress normcore selfies yuccie. Flexitarian semiotics waistcoat, art party franzen twee microdosing 3 wolf moon readymade echo park activated charcoal la croix locavore shaman. Raclette pok pok dreamcatcher retro kale chips. Humblebrag williamsburg tilde chia. Meggings pabst microdosing occupy glossier flexitarian vegan.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Hexagon sriracha cliche art party synth kickstarter la croix pour-over. Tbh fam bicycle rights pug direct trade hot chicken. Cornhole street art williamsburg retro ethical. Cronut vape distillery freegan intelligentsia. Asymmetrical cornhole crucifix lyft.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Leggings hoodie street art activated charcoal poke trust fund pour-over subway tile. Kitsch vexillologist listicle chicharrones cloud bread keytar, tote bag palo santo offal poutine. Portland flexitarian beard asymmetrical, church-key bicycle rights woke normcore locavore. Beard selfies live-edge seitan roof party man braid affogato. Next level man braid before they sold out, sustainable hashtag deep v kombucha kale chips meh kinfolk put a bird on it. Bushwick 3 wolf moon 90's, pok pok enamel pin four dollar toast shoreditch man braid. Selfies raw denim bicycle rights jean shorts mumblecore thundercats succulents taiyaki synth neutra paleo narwhal.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Af raw denim wolf jean shorts blog hammock coloring book hoodie. Crucifix stumptown tofu, pitchfork hashtag chartreuse truffaut. Thundercats hella 90's, bushwick shabby chic hell of snackwave helvetica af wayfarers tacos edison bulb semiotics bicycle rights keytar. Marfa hell of godard cornhole echo park paleo, fanny pack man bun art party mlkshk. Schlitz tote bag kogi venmo blue bottle readymade normcore shabby chic master cleanse occupy.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Dummy text? More like dummy thicc text, amirite",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "eikr6kdwhrzz"
+          }
+        },
+        "id": "6diGQHBXsx4ktbPn9xO0yS",
+        "type": "Entry",
+        "createdAt": "2020-07-05T03:14:50.592Z",
+        "updatedAt": "2020-07-22T02:26:27.030Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 10,
+        "publishedAt": "2020-07-22T02:26:27.030Z",
+        "firstPublishedAt": "2020-07-05T03:15:12.176Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 11,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "blogPost"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Blog Post 1",
+          "es": "Blog Post 1 (Spanish)"
+        },
+        "slug": {
+          "en-US": "blog-post-1"
+        },
+        "description": {
+          "en-US": "I'm baby activated charcoal la croix hashtag tumeric, blue bottle scenester banh mi normcore direct trade snackwave put a bird on it. Cliche brooklyn health goth cred kombucha stumptown. Photo booth fam everyday carry iceland authentic.",
+          "es": "I'm baby activated charcoal la croix hashtag tumeric, blue bottle scenester banh mi normcore direct trade snackwave put a bird on it. Cliche brooklyn health goth cred kombucha stumptown. Photo booth fam everyday carry iceland authentic."
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "Wemu33M3qr513lTpmQ4NV"
+            }
+          }
+        },
+        "seo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "79WJzxgLJcGefCbhdWsMit"
+            }
+          }
+        },
+        "body": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "I'm baby activated charcoal la croix hashtag tumeric, blue bottle scenester banh mi normcore direct trade snackwave put a bird on it. Cliche brooklyn health goth cred kombucha stumptown. Photo booth fam everyday carry iceland authentic. Twee la croix next level quinoa. Echo park hashtag heirloom yuccie chillwave normcore.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Pok pok venmo polaroid messenger bag pop-up +1. Bicycle rights vexillologist franzen, four dollar toast ramps neutra aesthetic flexitarian biodiesel fanny pack vape letterpress normcore selfies yuccie. Flexitarian semiotics waistcoat, art party franzen twee microdosing 3 wolf moon readymade echo park activated charcoal la croix locavore shaman. Raclette pok pok dreamcatcher retro kale chips. Humblebrag williamsburg tilde chia. Meggings pabst microdosing occupy glossier flexitarian vegan.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Hexagon sriracha cliche art party synth kickstarter la croix pour-over. Tbh fam bicycle rights pug direct trade hot chicken. Cornhole street art williamsburg retro ethical. Cronut vape distillery freegan intelligentsia. Asymmetrical cornhole crucifix lyft.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Leggings hoodie street art activated charcoal poke trust fund pour-over subway tile. Kitsch vexillologist listicle chicharrones cloud bread keytar, tote bag palo santo offal poutine. Portland flexitarian beard asymmetrical, church-key bicycle rights woke normcore locavore. Beard selfies live-edge seitan roof party man braid affogato. Next level man braid before they sold out, sustainable hashtag deep v kombucha kale chips meh kinfolk put a bird on it. Bushwick 3 wolf moon 90's, pok pok enamel pin four dollar toast shoreditch man braid. Selfies raw denim bicycle rights jean shorts mumblecore thundercats succulents taiyaki synth neutra paleo narwhal.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Af raw denim wolf jean shorts blog hammock coloring book hoodie. Crucifix stumptown tofu, pitchfork hashtag chartreuse truffaut. Thundercats hella 90's, bushwick shabby chic hell of snackwave helvetica af wayfarers tacos edison bulb semiotics bicycle rights keytar. Marfa hell of godard cornhole echo park paleo, fanny pack man bun art party mlkshk. Schlitz tote bag kogi venmo blue bottle readymade normcore shabby chic master cleanse occupy.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Dummy text? More like dummy thicc text, amirite",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          },
+          "es": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "I'm baby activated charcoal la croix hashtag tumeric, blue bottle scenester banh mi normcore direct trade snackwave put a bird on it. Cliche brooklyn health goth cred kombucha stumptown. Photo booth fam everyday carry iceland authentic. Twee la croix next level quinoa. Echo park hashtag heirloom yuccie chillwave normcore.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Pok pok venmo polaroid messenger bag pop-up +1. Bicycle rights vexillologist franzen, four dollar toast ramps neutra aesthetic flexitarian biodiesel fanny pack vape letterpress normcore selfies yuccie. Flexitarian semiotics waistcoat, art party franzen twee microdosing 3 wolf moon readymade echo park activated charcoal la croix locavore shaman. Raclette pok pok dreamcatcher retro kale chips. Humblebrag williamsburg tilde chia. Meggings pabst microdosing occupy glossier flexitarian vegan.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Hexagon sriracha cliche art party synth kickstarter la croix pour-over. Tbh fam bicycle rights pug direct trade hot chicken. Cornhole street art williamsburg retro ethical. Cronut vape distillery freegan intelligentsia. Asymmetrical cornhole crucifix lyft.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Leggings hoodie street art activated charcoal poke trust fund pour-over subway tile. Kitsch vexillologist listicle chicharrones cloud bread keytar, tote bag palo santo offal poutine. Portland flexitarian beard asymmetrical, church-key bicycle rights woke normcore locavore. Beard selfies live-edge seitan roof party man braid affogato. Next level man braid before they sold out, sustainable hashtag deep v kombucha kale chips meh kinfolk put a bird on it. Bushwick 3 wolf moon 90's, pok pok enamel pin four dollar toast shoreditch man braid. Selfies raw denim bicycle rights jean shorts mumblecore thundercats succulents taiyaki synth neutra paleo narwhal.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Af raw denim wolf jean shorts blog hammock coloring book hoodie. Crucifix stumptown tofu, pitchfork hashtag chartreuse truffaut. Thundercats hella 90's, bushwick shabby chic hell of snackwave helvetica af wayfarers tacos edison bulb semiotics bicycle rights keytar. Marfa hell of godard cornhole echo park paleo, fanny pack man bun art party mlkshk. Schlitz tote bag kogi venmo blue bottle readymade normcore shabby chic master cleanse occupy.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Dummy text? More like dummy thicc text, amirite",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "eikr6kdwhrzz"
+          }
+        },
+        "id": "py04aGCDbowOi8ddpru4t",
+        "type": "Entry",
+        "createdAt": "2020-07-05T03:14:55.233Z",
+        "updatedAt": "2020-07-22T02:26:54.424Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2020-07-22T02:26:54.424Z",
+        "firstPublishedAt": "2020-07-05T03:15:12.197Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "blogPost"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Blog Post 2",
+          "es": "Blog Post 2 (Spanish)"
+        },
+        "slug": {
+          "en-US": "blog-post-2"
+        },
+        "description": {
+          "en-US": "I'm baby activated charcoal la croix hashtag tumeric, blue bottle scenester banh mi normcore direct trade snackwave put a bird on it. Cliche brooklyn health goth cred kombucha stumptown. Photo booth fam everyday carry iceland authentic.",
+          "es": "I'm baby activated charcoal la croix hashtag tumeric, blue bottle scenester banh mi normcore direct trade snackwave put a bird on it. Cliche brooklyn health goth cred kombucha stumptown. Photo booth fam everyday carry iceland authentic."
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "3ADR9IFxM2TUA0R44WlwTf"
+            }
+          }
+        },
+        "seo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "79WJzxgLJcGefCbhdWsMit"
+            }
+          }
+        },
+        "body": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "I'm baby activated charcoal la croix hashtag tumeric, blue bottle scenester banh mi normcore direct trade snackwave put a bird on it. Cliche brooklyn health goth cred kombucha stumptown. Photo booth fam everyday carry iceland authentic. Twee la croix next level quinoa. Echo park hashtag heirloom yuccie chillwave normcore.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Pok pok venmo polaroid messenger bag pop-up +1. Bicycle rights vexillologist franzen, four dollar toast ramps neutra aesthetic flexitarian biodiesel fanny pack vape letterpress normcore selfies yuccie. Flexitarian semiotics waistcoat, art party franzen twee microdosing 3 wolf moon readymade echo park activated charcoal la croix locavore shaman. Raclette pok pok dreamcatcher retro kale chips. Humblebrag williamsburg tilde chia. Meggings pabst microdosing occupy glossier flexitarian vegan.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Hexagon sriracha cliche art party synth kickstarter la croix pour-over. Tbh fam bicycle rights pug direct trade hot chicken. Cornhole street art williamsburg retro ethical. Cronut vape distillery freegan intelligentsia. Asymmetrical cornhole crucifix lyft.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Leggings hoodie street art activated charcoal poke trust fund pour-over subway tile. Kitsch vexillologist listicle chicharrones cloud bread keytar, tote bag palo santo offal poutine. Portland flexitarian beard asymmetrical, church-key bicycle rights woke normcore locavore. Beard selfies live-edge seitan roof party man braid affogato. Next level man braid before they sold out, sustainable hashtag deep v kombucha kale chips meh kinfolk put a bird on it. Bushwick 3 wolf moon 90's, pok pok enamel pin four dollar toast shoreditch man braid. Selfies raw denim bicycle rights jean shorts mumblecore thundercats succulents taiyaki synth neutra paleo narwhal.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Af raw denim wolf jean shorts blog hammock coloring book hoodie. Crucifix stumptown tofu, pitchfork hashtag chartreuse truffaut. Thundercats hella 90's, bushwick shabby chic hell of snackwave helvetica af wayfarers tacos edison bulb semiotics bicycle rights keytar. Marfa hell of godard cornhole echo park paleo, fanny pack man bun art party mlkshk. Schlitz tote bag kogi venmo blue bottle readymade normcore shabby chic master cleanse occupy.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Dummy text? More like dummy thicc text, amirite",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          },
+          "es": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "I'm baby activated charcoal la croix hashtag tumeric, blue bottle scenester banh mi normcore direct trade snackwave put a bird on it. Cliche brooklyn health goth cred kombucha stumptown. Photo booth fam everyday carry iceland authentic. Twee la croix next level quinoa. Echo park hashtag heirloom yuccie chillwave normcore.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Pok pok venmo polaroid messenger bag pop-up +1. Bicycle rights vexillologist franzen, four dollar toast ramps neutra aesthetic flexitarian biodiesel fanny pack vape letterpress normcore selfies yuccie. Flexitarian semiotics waistcoat, art party franzen twee microdosing 3 wolf moon readymade echo park activated charcoal la croix locavore shaman. Raclette pok pok dreamcatcher retro kale chips. Humblebrag williamsburg tilde chia. Meggings pabst microdosing occupy glossier flexitarian vegan.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Hexagon sriracha cliche art party synth kickstarter la croix pour-over. Tbh fam bicycle rights pug direct trade hot chicken. Cornhole street art williamsburg retro ethical. Cronut vape distillery freegan intelligentsia. Asymmetrical cornhole crucifix lyft.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Leggings hoodie street art activated charcoal poke trust fund pour-over subway tile. Kitsch vexillologist listicle chicharrones cloud bread keytar, tote bag palo santo offal poutine. Portland flexitarian beard asymmetrical, church-key bicycle rights woke normcore locavore. Beard selfies live-edge seitan roof party man braid affogato. Next level man braid before they sold out, sustainable hashtag deep v kombucha kale chips meh kinfolk put a bird on it. Bushwick 3 wolf moon 90's, pok pok enamel pin four dollar toast shoreditch man braid. Selfies raw denim bicycle rights jean shorts mumblecore thundercats succulents taiyaki synth neutra paleo narwhal.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Af raw denim wolf jean shorts blog hammock coloring book hoodie. Crucifix stumptown tofu, pitchfork hashtag chartreuse truffaut. Thundercats hella 90's, bushwick shabby chic hell of snackwave helvetica af wayfarers tacos edison bulb semiotics bicycle rights keytar. Marfa hell of godard cornhole echo park paleo, fanny pack man bun art party mlkshk. Schlitz tote bag kogi venmo blue bottle readymade normcore shabby chic master cleanse occupy.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Dummy text? More like dummy thicc text, amirite",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "eikr6kdwhrzz"
+          }
+        },
+        "id": "79WJzxgLJcGefCbhdWsMit",
+        "type": "Entry",
+        "createdAt": "2020-07-22T00:27:01.030Z",
+        "updatedAt": "2020-07-22T00:27:31.852Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2020-07-22T00:27:31.852Z",
+        "firstPublishedAt": "2020-07-22T00:27:31.852Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "seo"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "SEO Placeholder"
+        },
+        "title": {
+          "en-US": "SEO Placeholder Title",
+          "es": "SEO Placeholder Title Spanish"
+        },
+        "description": {
+          "en-US": "SEO Placeholder Description",
+          "es": "SEO Placeholder Description Spanish"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "7ihwKIXZWR4vezsjWVB4tG"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "eikr6kdwhrzz"
+          }
+        },
+        "id": "1HF45Va743uBFdCnvWVluc",
+        "type": "Entry",
+        "createdAt": "2020-07-22T02:38:03.730Z",
+        "updatedAt": "2020-07-22T03:45:22.302Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 28,
+        "publishedAt": "2020-07-22T03:45:22.302Z",
+        "firstPublishedAt": "2020-07-22T03:07:31.213Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 29,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "embeddedRif"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Starter Description"
+        },
+        "body": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "heading-2",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "The Gatsby Starter for multi-locale Contentful Projects",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ],
+                "data": {
+                }
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Block-Based Content Model that includes support for Generic pages and a Blog.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ],
+                "data": {
+                }
+              }
+            ]
+          },
+          "es": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "value": "El starter de Gatsby para projectos multi-locale con Contentful",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-2"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Content Model basado en ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "bold"
+                      },
+                      {
+                        "type": "italic"
+                      }
+                    ],
+                    "value": "Blocks ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "que incluye páginas genéricas y un Blog",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "\n",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "eikr6kdwhrzz"
+          }
+        },
+        "id": "7ihwKIXZWR4vezsjWVB4tG",
+        "type": "Asset",
+        "createdAt": "2020-07-03T02:02:30.388Z",
+        "updatedAt": "2020-07-03T02:02:46.155Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2020-07-03T02:02:46.155Z",
+        "firstPublishedAt": "2020-07-03T02:02:46.155Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Home Page SEO Image"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/eikr6kdwhrzz/7ihwKIXZWR4vezsjWVB4tG/70a7b13370ab12f955a59519c745b779/photo-1593642632823-8f785ba67e45",
+            "details": {
+              "size": 199436,
+              "image": {
+                "width": 1489,
+                "height": 838
+              }
+            },
+            "fileName": "photo-1593642632823-8f785ba67e45",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "eikr6kdwhrzz"
+          }
+        },
+        "id": "3EPtMIQLOPnRzuvmUcFBSv",
+        "type": "Asset",
+        "createdAt": "2020-07-03T03:42:19.273Z",
+        "updatedAt": "2020-07-03T03:42:46.227Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2020-07-03T03:42:46.227Z",
+        "firstPublishedAt": "2020-07-03T03:42:46.227Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Fixed Page Image",
+          "es": "Imagen Pagina Fija"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/eikr6kdwhrzz/3EPtMIQLOPnRzuvmUcFBSv/96a2824157e6adc22a6f1214445103b1/photo-1532092677386-c4010b76dd2b",
+            "details": {
+              "size": 526505,
+              "image": {
+                "width": 1351,
+                "height": 901
+              }
+            },
+            "fileName": "photo-1532092677386-c4010b76dd2b",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "eikr6kdwhrzz"
+          }
+        },
+        "id": "3NxAGWgJcniTu1sHMwZg4Z",
+        "type": "Asset",
+        "createdAt": "2020-07-03T03:43:48.774Z",
+        "updatedAt": "2020-07-04T02:14:56.536Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2020-07-04T02:14:56.536Z",
+        "firstPublishedAt": "2020-07-03T03:43:59.059Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Logo"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/eikr6kdwhrzz/3NxAGWgJcniTu1sHMwZg4Z/f0e596c8999de4a55304cc9f34a131eb/duplicate-content.png",
+            "details": {
+              "size": 4565,
+              "image": {
+                "width": 376,
+                "height": 376
+              }
+            },
+            "fileName": "duplicate-content.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "eikr6kdwhrzz"
+          }
+        },
+        "id": "4k6rKk9eg818HLLQ69Y7bP",
+        "type": "Asset",
+        "createdAt": "2020-07-04T20:10:52.784Z",
+        "updatedAt": "2020-07-04T20:11:07.659Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2020-07-04T20:11:07.659Z",
+        "firstPublishedAt": "2020-07-04T20:11:07.659Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Generic"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/eikr6kdwhrzz/4k6rKk9eg818HLLQ69Y7bP/4d90540753229e4ae6b019dc015bd34b/photo-1532264523420-881a47db012d",
+            "details": {
+              "size": 290651,
+              "image": {
+                "width": 2167,
+                "height": 1625
+              }
+            },
+            "fileName": "photo-1532264523420-881a47db012d",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "eikr6kdwhrzz"
+          }
+        },
+        "id": "5UVBI9WkM7gEZPEp9KyUPy",
+        "type": "Asset",
+        "createdAt": "2020-07-04T20:18:01.191Z",
+        "updatedAt": "2020-07-04T20:18:27.829Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2020-07-04T20:18:27.829Z",
+        "firstPublishedAt": "2020-07-04T20:18:27.829Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Men Writing on Keyboard"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/eikr6kdwhrzz/5UVBI9WkM7gEZPEp9KyUPy/f7ede0a66289909811e09f4173fb6c22/photo-1555421689-491a97ff2040",
+            "details": {
+              "size": 239876,
+              "image": {
+                "width": 2250,
+                "height": 1500
+              }
+            },
+            "fileName": "photo-1555421689-491a97ff2040",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "eikr6kdwhrzz"
+          }
+        },
+        "id": "2Y0vWqDZfQm4oHBLlzbgmo",
+        "type": "Asset",
+        "createdAt": "2020-07-05T00:39:35.424Z",
+        "updatedAt": "2020-07-05T00:39:48.547Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2020-07-05T00:39:48.546Z",
+        "firstPublishedAt": "2020-07-05T00:39:48.546Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Blog "
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/eikr6kdwhrzz/2Y0vWqDZfQm4oHBLlzbgmo/196b916b976c5dea2d330936c675503c/photo-1457369804613-52c61a468e7d",
+            "details": {
+              "size": 332298,
+              "image": {
+                "width": 1350,
+                "height": 900
+              }
+            },
+            "fileName": "photo-1457369804613-52c61a468e7d",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "eikr6kdwhrzz"
+          }
+        },
+        "id": "3ADR9IFxM2TUA0R44WlwTf",
+        "type": "Asset",
+        "createdAt": "2020-07-21T23:52:56.470Z",
+        "updatedAt": "2020-07-21T23:53:29.855Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-07-21T23:53:29.855Z",
+        "firstPublishedAt": "2020-07-21T23:53:29.855Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "photo-1595211678154-e0dc910acd1b"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/eikr6kdwhrzz/3ADR9IFxM2TUA0R44WlwTf/17e6cbbbc4d68fcbbd4396b123f65189/photo-1595211678154-e0dc910acd1b",
+            "details": {
+              "size": 83220,
+              "image": {
+                "width": 1350,
+                "height": 900
+              }
+            },
+            "fileName": "photo-1595211678154-e0dc910acd1b",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "eikr6kdwhrzz"
+          }
+        },
+        "id": "Wemu33M3qr513lTpmQ4NV",
+        "type": "Asset",
+        "createdAt": "2020-07-21T23:54:06.604Z",
+        "updatedAt": "2020-07-21T23:54:21.389Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-07-21T23:54:21.389Z",
+        "firstPublishedAt": "2020-07-21T23:54:21.389Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "photo-1594894326685-a5245b377578"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/eikr6kdwhrzz/Wemu33M3qr513lTpmQ4NV/31de66f241081bd17a31841e4d45f05e/photo-1594894326685-a5245b377578",
+            "details": {
+              "size": 164436,
+              "image": {
+                "width": 658,
+                "height": 921
+              }
+            },
+            "fileName": "photo-1594894326685-a5245b377578",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "eikr6kdwhrzz"
+          }
+        },
+        "id": "7dLIV32q1dy3X4IPIVyUIt",
+        "type": "Asset",
+        "createdAt": "2020-07-21T23:54:39.889Z",
+        "updatedAt": "2020-07-21T23:54:48.476Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-07-21T23:54:48.476Z",
+        "firstPublishedAt": "2020-07-21T23:54:48.476Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "photo-1542406915-20eac16493d2"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/eikr6kdwhrzz/7dLIV32q1dy3X4IPIVyUIt/163356b0548bd2e92c5780febc3f4064/photo-1542406915-20eac16493d2",
+            "details": {
+              "size": 136620,
+              "image": {
+                "width": 1350,
+                "height": 900
+              }
+            },
+            "fileName": "photo-1542406915-20eac16493d2",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    }
+  ],
+  "locales": [
+    {
+      "name": "English (United States)",
+      "code": "en-US",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "2SxKbQLn6ZaAjU1b1ZFIw7",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "eikr6kdwhrzz"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "createdAt": "2020-06-28T22:12:24Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "updatedAt": "2020-06-28T22:12:24Z"
+      }
+    },
+    {
+      "name": "Spanish",
+      "code": "es",
+      "fallbackCode": "en-US",
+      "default": false,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "7KfgHgxaHlsOCdqoYo6XNa",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "eikr6kdwhrzz"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "createdAt": "2020-07-03T02:01:12Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3zwp1DCzGbvJjunZqNodNG"
+          }
+        },
+        "updatedAt": "2020-07-03T02:01:12Z"
+      }
+    }
+  ],
+  "webhooks": [
+  ],
+  "roles": [
+  ]
+}
