@@ -8,7 +8,7 @@
 Gatsby-Starter-Contentful-Multi-Locale
 </h1>
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+This Starter uses TypeScript, GraphQL code generator, and Styled Components and other technologies to create a fast and easy multi-locale start point with Gatsby.js and Contentful.
 
 
 ## 🚀 Quick start
