@@ -24,8 +24,8 @@ Kick off your project with this default boilerplate. This starter ships with the
 
 1.  **Setup the Contentful content model.**
     ```shell
-        cd my-contentful-multi-locale-starter
-        yarn setup
+    cd my-contentful-multi-locale-starter
+    yarn setup
     ```
     
 
